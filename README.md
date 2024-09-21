@@ -58,7 +58,8 @@ You need to create a JSON configuration file to specify the options for the tool
     "stop_on_success": true,
     "username_mode": "constant",
     "constant_username": "admin"
-}```
+}
+```
 
     url: The target XML-RPC API endpoint.
     username_file: Path to the file containing a list of usernames (optional if constant_username is set).
