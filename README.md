@@ -37,15 +37,12 @@ Proxy List Format
 
 Create a proxy list file with the following format:
 
-plaintext
-
 104.248.59.38:80
 37.120.133.137:3128
 193.34.95.110:8080
 106.45.221.168:3256
 
-The script will automatically add http:// if no scheme is provided.
-Usage
+Usage:
 1. Configuration File
 
 You need to create a JSON configuration file to specify the options for the tool. Here is an example config.json file:
