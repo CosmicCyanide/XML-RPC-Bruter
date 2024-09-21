@@ -39,7 +39,13 @@ def load_config(file_path):
 def load_file(file_path):
     try:
         with open(file_path, 'r', encoding='latin-1') as f:
-            return [line.strip() for line in f if line.strip()]
+            lines = [line.strip() for line in f if line.strip()]
+            proxies = []
+            for proxy in lines:
+                if not proxy.startswith(('http://', 'https://', 'socks4://', 'socks5://')):
+                    proxy = f'http://{proxy}'
+                proxies.append(proxy)
+            return proxies
     except Exception as e:
         logging.error(f'Error loading file {file_path}: {e}')
         return []
@@ -48,7 +54,6 @@ async def attempt_login(session, url, username, password, proxy, delay):
     try:
         await asyncio.sleep(delay)
 
-        # Configure proxy settings with aiohttp_socks
         connector = ProxyConnector.from_url(proxy)
         async with ClientSession(connector=connector) as session:
             payload = xmlrpc.client.ServerProxy(url)
