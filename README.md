@@ -102,13 +102,12 @@ python xmlrpc_bruteforce.py config.json
     Successful logins will be highlighted in green, and errors will be displayed in red.
 
 Example Output
-
-yaml
-
+```
 2024-09-20 12:45:22,230 - INFO - Loaded configuration from config.json.
 2024-09-20 12:45:22,250 - INFO - Loaded proxies from proxies.txt.
 Brute-Force Progress:  25%|██████████████████▍                      |  2500/10000 [00:30<02:00,  20attempt/s]
 Success: admin:password through http://104.248.59.38:80
+```
 
 License
 
